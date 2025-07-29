@@ -1,0 +1,10 @@
+# This file is used internally by FFMPEG.
+file 'file:D:/PyWork/ScriptProject/media/videos/frequency_animation/480p15/partial_movie_files/FrequencyAnimation3D/3028389898_2442877898_223132457.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/frequency_animation/480p15/partial_movie_files/FrequencyAnimation3D/99950615_3942878761_2400092554.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/frequency_animation/480p15/partial_movie_files/FrequencyAnimation3D/99950615_1121617232_4081043920.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/frequency_animation/480p15/partial_movie_files/FrequencyAnimation3D/99950615_414649959_251026337.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/frequency_animation/480p15/partial_movie_files/FrequencyAnimation3D/1430101910_691929108_2964920487.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/frequency_animation/480p15/partial_movie_files/FrequencyAnimation3D/2365131228_1749598051_3790829185.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/frequency_animation/480p15/partial_movie_files/FrequencyAnimation3D/2584879799_691929108_2902995474.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/frequency_animation/480p15/partial_movie_files/FrequencyAnimation3D/2412442392_3438883765_1676082409.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/frequency_animation/480p15/partial_movie_files/FrequencyAnimation3D/749201868_691929108_2680667206.mp4'

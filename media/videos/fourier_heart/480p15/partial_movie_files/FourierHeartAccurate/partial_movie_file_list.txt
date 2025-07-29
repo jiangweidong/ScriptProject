@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeartAccurate/3032358156_422050687_4090903848.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeartAccurate/539296182_3201849554_138320423.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeartAccurate/539296182_208121865_1225879736.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeartAccurate/539296182_2209452894_806040793.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeartAccurate/539296182_2749144852_4068618758.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeartAccurate/539296182_1697288515_975807367.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeartAccurate/539296182_1839128356_2503948273.mp4'

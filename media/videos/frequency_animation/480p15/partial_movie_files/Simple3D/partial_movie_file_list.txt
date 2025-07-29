@@ -1,0 +1,3 @@
+# This file is used internally by FFMPEG.
+file 'file:D:/PyWork/ScriptProject/media/videos/frequency_animation/480p15/partial_movie_files/Simple3D/3028389898_2137268671_223132457.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/frequency_animation/480p15/partial_movie_files/Simple3D/99950615_2968904986_3581273740.mp4'

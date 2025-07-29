@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeart3D/1460479648_3774028826_223132457.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeart3D/956410889_2631580503_3054145851.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeart3D/956410889_901144814_2231025775.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeart3D/956410889_4204738596_2242762628.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeart3D/956410889_691929108_216772416.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeart3D/956410889_3825297136_912454098.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeart3D/1200418904_3405865499_3470347003.mp4'
+file 'file:D:/PyWork/ScriptProject/media/videos/fourier_heart/480p15/partial_movie_files/FourierHeart3D/3541238076_691929108_2534260149.mp4'
