@@ -7,7 +7,7 @@ import matplotlib.dates as mdates
 from datetime import datetime
 
 # --- 1. 回测参数设置 ---
-initial_capital = 100000.0
+initial_capital = 200000.0
 stock_code = "300322"
 start_date = "20240701"
 # 结束日期为今天

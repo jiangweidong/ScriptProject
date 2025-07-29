@@ -1,0 +1,66 @@
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.piano-container {
+    width: 90vw;
+    overflow-x: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 20px 0;
+}
+
+.piano {
+    display: flex;
+    position: relative;
+    width: fit-content;
+}
+
+.key {
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.white {
+    width: 40px;
+    height: 200px;
+    background-color: white;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    box-sizing: border-box;
+}
+
+.black {
+    width: 25px;
+    height: 120px;
+    background-color: black;
+    position: absolute;
+    left: -12.5px;
+    z-index: 2;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.key.active {
+    background-color: #ccc;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#song-select, #play-btn {
+    padding: 10px;
+    font-size: 16px;
+}

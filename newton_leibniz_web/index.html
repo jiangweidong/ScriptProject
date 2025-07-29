@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton-Leibniz Formula</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7zTDRGbadArOPiQZpFb5xAGA" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The Newton-Leibniz Formula</h1>
+        <p>The Newton-Leibniz formula, also known as the fundamental theorem of calculus, states that if a function f is continuous on the interval [a, b] and F is an antiderivative of f, then the definite integral of f from a to b is given by:</p>
+        <div id="formula-container"></div>
+        <p>Where:</p>
+        <ul>
+            <li><span class="math">∫<sub>a</sub><sup>b</sup> f(x) dx</span> represents the definite integral of f(x) from a to b.</li>
+            <li><span class="math">F(x)</span> is an antiderivative of <span class="math">f(x)</span> (i.e., <span class="math">F'(x) = f(x)</span>).</li>
+            <li><span class="math">F(b) - F(a)</span> is the net change of the antiderivative over the interval [a, b].</li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41eSirBALu4pVpTyW2A49TT2sftRy5IF/OPMLQG6OKbLqAxQ<div>" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

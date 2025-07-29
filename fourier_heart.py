@@ -34,6 +34,8 @@ class FourierHeartAccurate(Scene):
         
         def get_vectors(t):
             vectors = VGroup()
+
+            
             start_point = self.center_point
             for i in range(self.n_vectors):
                 freq = freqs[i]

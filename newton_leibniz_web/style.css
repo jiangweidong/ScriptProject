@@ -1,0 +1,31 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    padding: 2em;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#formula-container {
+    font-size: 2em;
+    margin: 1em 0;
+}
+
+.math {
+    font-family: "KaTeX_Main", "Times New Roman", serif;
+}
+
+ul {
+    text-align: left;
+    display: inline-block;
+}
