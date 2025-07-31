@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Function Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Complex Function Animation: <span id="function-display">f(z) = z^2</span></h1>
+    <div id="controls">
+        <label for="function-select">Choose a function:</label>
+        <select id="function-select">
+            <option value="z_squared" selected>f(z) = z^2</option>
+            <option value="exp_z">f(z) = e^z</option>
+            <option value="sin_z">f(z) = sin(z)</option>
+            <option value="z_cubed">f(z) = z^3</option>
+        </select>
+        <button id="reset-button">Reset</button>
+        <button id="pause-button">Pause</button>
+    </div>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>

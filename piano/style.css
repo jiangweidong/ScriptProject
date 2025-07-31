@@ -57,7 +57,20 @@ body {
 .controls {
     margin-top: 20px;
     display: flex;
+    align-items: center;
     gap: 10px;
+}
+
+#metronome {
+    width: 20px;
+    height: 20px;
+    background-color: #888;
+    border-radius: 50%;
+    transition: background-color 0.1s;
+}
+
+#metronome.active {
+    background-color: #ff4d4d;
 }
 
 #song-select, #play-btn {

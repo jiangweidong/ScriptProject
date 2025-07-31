@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const piano = document.querySelector('.piano');
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const metronome = document.getElementById('metronome');
 
     const allNotes = [];
     const noteNames = ["A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab"];
@@ -74,37 +75,67 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const songs = {
-        'fur-elise': [
-            ['E5', 0.2], ['Eb5', 0.2], ['E5', 0.2], ['Eb5', 0.2], ['E5', 0.2], ['B4', 0.2], ['D5', 0.2], ['C5', 0.2], ['A4', 0.4],
-            ['C4', 0.2], ['E4', 0.2], ['A4', 0.2], ['B4', 0.4], ['E4', 0.2], ['Ab4', 0.2], ['B4', 0.2], ['C5', 0.4],
-            ['E5', 0.2], ['Eb5', 0.2], ['E5', 0.2], ['Eb5', 0.2], ['E5', 0.2], ['B4', 0.2], ['D5', 0.2], ['C5', 0.2], ['A4', 0.4],
-            ['C4', 0.2], ['E4', 0.2], ['A4', 0.2], ['B4', 0.4], ['E4', 0.2], ['C5', 0.2], ['B4', 0.2], ['A4', 0.4]
-        ],
-        'castle-in-the-sky': [
-            ['A4', 0.4], ['B4', 0.2], ['C5', 0.4], ['B4', 0.4], ['D5', 0.4], ['C5', 0.8],
-            ['G4', 0.4], ['A4', 0.2], ['B4', 0.4], ['A4', 0.4], ['C5', 0.4], ['B4', 0.8],
-            ['A4', 0.4], ['G4', 0.2], ['A4', 0.4], ['G4', 0.4], ['F4', 0.4], ['E4', 0.8],
-            ['F4', 0.4], ['D4', 0.4], ['C4', 0.4], ['D4', 0.4], ['G4', 0.4], ['A3', 0.8]
-        ],
-        'dolls-and-bears': [
-            ['G4', 0.2], ['G4', 0.2], ['A4', 0.2], ['G4', 0.2], ['F4', 0.4], ['F4', 0.4], ['D4', 0.2], ['D4', 0.2], ['G4', 0.2], ['D4', 0.2], ['C4', 0.4], ['C4', 0.4],
-            ['G4', 0.2], ['G4', 0.2], ['A4', 0.2], ['G4', 0.2], ['F4', 0.4], ['F4', 0.4], ['D4', 0.2], ['D4', 0.2], ['G4', 0.2], ['C4', 0.2], ['D4', 0.8]
-        ],
-        'canon': [
-            ['F5', 0.4], ['E5', 0.4], ['D5', 0.4], ['C5', 0.4], ['B4', 0.4], ['A4', 0.4], ['B4', 0.4], ['C5', 0.4],
-            ['D5', 0.4], ['C5', 0.4], ['B4', 0.4], ['A4', 0.4], ['G4', 0.4], ['F4', 0.4], ['G4', 0.4], ['A4', 0.4],
-            ['B4', 0.4], ['A4', 0.4], ['G4', 0.4], ['F4', 0.4], ['E4', 0.4], ['D4', 0.4], ['E4', 0.4], ['F4', 0.4],
-            ['G4', 0.4], ['A4', 0.4], ['B4', 0.4], ['C5', 0.4], ['D5', 0.4], ['E5', 0.4], ['F5', 0.4], ['G5', 0.4]
-        ]
+        'fur-elise': {
+            bpm: 100,
+            notes: [
+                ['E5', 0.25], ['Eb5', 0.25], ['E5', 0.25], ['Eb5', 0.25], ['E5', 0.25], ['B4', 0.25], ['D5', 0.25], ['C5', 0.25], ['A4', 0.5],
+                ['C4', 0.25], ['E4', 0.25], ['A4', 0.25], ['B4', 0.5], ['E4', 0.25], ['Ab4', 0.25], ['B4', 0.25], ['C5', 0.5],
+                ['E5', 0.25], ['Eb5', 0.25], ['E5', 0.25], ['Eb5', 0.25], ['E5', 0.25], ['B4', 0.25], ['D5', 0.25], ['C5', 0.25], ['A4', 0.5],
+                ['C4', 0.25], ['E4', 0.25], ['A4', 0.25], ['B4', 0.5], ['E4', 0.25], ['C5', 0.25], ['B4', 0.25], ['A4', 0.5],
+                ['B4', 0.25], ['C5', 0.25], ['D5', 0.25], ['E5', 0.5], ['G4', 0.25], ['F5', 0.25], ['E5', 0.25], ['D5', 0.5],
+                ['F4', 0.25], ['E5', 0.25], ['D5', 0.25], ['C5', 0.5], ['E4', 0.25], ['D5', 0.25], ['C5', 0.25], ['B4', 0.5]
+            ]
+        },
+        'castle-in-the-sky': {
+            bpm: 120,
+            notes: [
+                ['A4', 0.5], ['B4', 0.25], ['C5', 0.5], ['B4', 0.25], ['C5', 0.5], ['D5', 0.5], ['C5', 1],
+                ['G4', 0.5], ['A4', 0.25], ['B4', 0.5], ['A4', 0.25], ['B4', 0.5], ['C5', 0.5], ['B4', 1],
+                ['A4', 0.5], ['G4', 0.25], ['A4', 0.5], ['G4', 0.25], ['F4', 0.5], ['E4', 0.5], ['F4', 1],
+                ['D4', 0.5], ['E4', 0.25], ['F4', 0.5], ['E4', 0.25], ['F4', 0.5], ['G4', 0.5], ['A4', 1]
+            ]
+        },
+        'dolls-and-bears': {
+            bpm: 140,
+            notes: [
+                ['G4', 0.25], ['G4', 0.25], ['A4', 0.25], ['G4', 0.25], ['F4', 0.5], ['F4', 0.5],
+                ['D4', 0.25], ['D4', 0.25], ['G4', 0.25], ['D4', 0.25], ['C4', 0.5], ['C4', 0.5],
+                ['G4', 0.25], ['G4', 0.25], ['A4', 0.25], ['G4', 0.25], ['F4', 0.5], ['F4', 0.5],
+                ['D4', 0.25], ['D4', 0.25], ['G4', 0.25], ['C4', 0.25], ['D4', 1]
+            ]
+        },
+        'canon': {
+            bpm: 100,
+            notes: [
+                ['F5', 0.5], ['E5', 0.5], ['D5', 0.5], ['C5', 0.5], ['B4', 0.5], ['A4', 0.5], ['B4', 0.5], ['C5', 0.5],
+                ['D5', 0.5], ['C5', 0.5], ['B4', 0.5], ['A4', 0.5], ['G4', 0.5], ['F4', 0.5], ['G4', 0.5], ['A4', 0.5],
+                ['B4', 0.5], ['A4', 0.5], ['G4', 0.5], ['F4', 0.5], ['E4', 0.5], ['D4', 0.5], ['E4', 0.5], ['F4', 0.5],
+                ['G4', 0.5], ['A4', 0.5], ['B4', 0.5], ['C5', 0.5], ['D5', 0.5], ['E5', 0.5], ['F5', 0.5], ['G5', 0.5]
+            ]
+        }
     };
 
     const playBtn = document.getElementById('play-btn');
     const songSelect = document.getElementById('song-select');
+    let metronomeInterval = null;
 
     function playSong(song) {
+        if (metronomeInterval) {
+            clearInterval(metronomeInterval);
+        }
+
+        const beatDuration = 60 / song.bpm;
+        let totalDuration = 0;
+        
+        metronomeInterval = setInterval(() => {
+            metronome.classList.add('active');
+            setTimeout(() => metronome.classList.remove('active'), 100);
+        }, beatDuration * 1000);
+
         let currentTime = 0;
-        song.forEach(noteInfo => {
+        song.notes.forEach(noteInfo => {
             const [noteName, duration] = noteInfo;
+            totalDuration += duration * beatDuration;
             setTimeout(() => {
                 if (noteName) {
                     const keyElement = document.querySelector(`.key[data-note="${noteName}"]`);
@@ -114,8 +145,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             }, currentTime * 1000);
-            currentTime += duration;
+            currentTime += duration * beatDuration;
         });
+
+        setTimeout(() => {
+            clearInterval(metronomeInterval);
+            metronomeInterval = null;
+        }, totalDuration * 1000);
     }
 
     playBtn.addEventListener('click', () => {
